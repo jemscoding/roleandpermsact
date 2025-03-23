@@ -1,2 +1,2 @@
-# roleandpermsact
-Roles and Permission Activity (Balito and Macalde)
+# Role and Permission Activity
+Roles and Permission Activity Repository (Balito and Macalde)
