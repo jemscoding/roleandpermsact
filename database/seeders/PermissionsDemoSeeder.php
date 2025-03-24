@@ -18,6 +18,7 @@ class PermissionsDemoSeeder extends Seeder
         app()[PermissionRegistrar::class]->forgetCachedPermissions();
 
         // create permissions
+        Permission::create(['name' => 'view posts', 'guard_name' => 'web']);
         Permission::create(['name' => 'create posts', 'guard_name' => 'web']);
         Permission::create(['name' => 'edit posts', 'guard_name' => 'web']);
         Permission::create(['name' => 'publish posts', 'guard_name' => 'web']);

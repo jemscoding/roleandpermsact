@@ -14,7 +14,7 @@ class RoleController extends Controller
     public function index()
     {
         //
-        $roles = Role::all();
+        $roles = Role::with('permissions')->get();
         return view('roles.index', compact('roles'));
     }
 
@@ -73,7 +73,7 @@ class RoleController extends Controller
         $request->validate([
             'name' => "required",
         ]);
-        $role = Role::create(['name' => $request->name]);
+        $role = Role::find($id);
         $role->syncPermissions($request->permissions);
 
         return redirect()->route('roles.index')
