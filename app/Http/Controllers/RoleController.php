@@ -34,7 +34,7 @@ class RoleController extends Controller
     {
         //
         $request->validate([
-            'name' => 'required',
+            'name' => 'required|unique:roles,name',
         ]);
         $role = Role::create(['name' => $request->name]);
         $role->syncPermissions($request->permissions);
