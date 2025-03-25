@@ -16,3 +16,15 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 //all route methods call for role
 Route::resource('roles', RoleController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
